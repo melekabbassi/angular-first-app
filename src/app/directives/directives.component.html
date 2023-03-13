@@ -47,3 +47,13 @@
 </ul>
   
 <h1>-------------------------------------------------------</h1>
+
+<ul>
+    <ng-container *ngFor="let grade of Grades">
+        <li [ngClass]="{'rouge': grade < 10, 'bleu': grade >= 10}">
+            {{grade}}
+        </li>
+    </ng-container>
+</ul>
+  
+<h1>-------------------------------------------------------</h1>
