@@ -1,0 +1,49 @@
+<p>directives works!</p>
+
+<ul>
+    <li *ngFor="let person of People, let i=index">
+        {{i}}: {{person.firstName.toUpperCase()}} {{person.lastName.toUpperCase()}}, {{person.age}}
+    </li>
+</ul>
+
+<h1>-------------------------------------------------------</h1>
+
+<ul>
+    <li *ngIf="Grades[Grades.length - 1] % 2 == 0">
+        {{Grades[Grades.length - 1]}} is even
+    </li>
+    <li *ngIf="Grades[Grades.length - 1] % 2 != 0">
+        {{Grades[Grades.length - 1]}} is odd
+    </li>
+</ul>
+
+<h1>-------------------------------------------------------</h1>
+
+<ul>
+    <li *ngFor="let grade of Grades, let i=index">
+        {{i}}: {{grade}} {{grade % 2 == 0 ? 'even' : 'odd'}}
+    </li>
+</ul>
+
+<h1>-------------------------------------------------------</h1>
+
+<ul>
+    <li *ngFor="let grade of Grades, let i=index">
+        {{i}}: {{grade}} {{grade < 10 ? 'Fail' : grade < 14 ? 'Average' : grade < 17 ? 'Good' : 'Very well'}}
+    </li>
+</ul>
+
+<h1>-------------------------------------------------------</h1>
+
+<ul>
+    <li *ngFor="let grade of Grades; let i = index" [ngSwitch]="true">
+      {{i}}:
+      {{grade}}
+      <ng-container *ngSwitchCase="grade < 10">Fail</ng-container>
+      <ng-container *ngSwitchCase="grade >= 10 && grade < 14">Average</ng-container>
+      <ng-container *ngSwitchCase="grade >= 14 && grade < 17">Good</ng-container>
+    <ng-container *ngSwitchDefault>Very well</ng-container>
+    </li>
+</ul>
+  
+<h1>-------------------------------------------------------</h1>
