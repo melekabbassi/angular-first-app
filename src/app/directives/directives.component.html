@@ -57,3 +57,11 @@
 </ul>
   
 <h1>-------------------------------------------------------</h1>
+
+<ul>
+    <ng-container *ngFor="let person of People; let i = index">
+        <li [ngClass]="{'rouge': i % 2 != 0, 'vert': i % 2 == 0}">
+            {{person.firstName}} {{person.lastName}}
+        </li>
+    </ng-container>
+</ul>

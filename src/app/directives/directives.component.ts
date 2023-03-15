@@ -7,7 +7,8 @@ import { Person } from '../classes/person';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent {
-  Grades : number[] = [5, 8, 10, 15 , 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
+  // Array of Grades between 0 and 20 randomly generated
+  Grades: number[] = [5, 10, 15, 20, 0, 5, 10, 15, 20, 0, 5, 10, 15, 20, 0, 5, 10, 15, 20, 0];
 
   People: Array<Person> = [
     new Person(1,'John', 'Doe', 30),
