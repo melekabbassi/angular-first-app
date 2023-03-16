@@ -1,0 +1,25 @@
+Project {{title}}
+
+<ul>
+  <li>Person: {{person | json}}</li>
+  <li>Full name: {{person.firstName}} {{person.lastName}}</li>
+  <li>Age: {{person.age}}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let element of Grades, let i=index">
+    {{i}}: {{element}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let element of Grades, let i=index, let isFirst=first">
+    {{i}} : {{element}} : {{isFirst}}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let person of People, let i=index">
+    {{i}}: {{person.firstName}} {{person.lastName}}, {{person.age}}
+  </li>
+</ul>

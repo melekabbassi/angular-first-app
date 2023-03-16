@@ -1,0 +1,10 @@
+<p>parent works!</p>
+
+<!-- <ul>
+    <app-child [order]="table[0]" [BirthCountry]="south"></app-child>
+    <app-child [order]="table[1]" [BirthCountry]="north"></app-child>
+    <app-child [order]="table[2]" [BirthCountry]="capital"></app-child>
+</ul> -->
+
+<h3>Result of my children {{ result }}</h3>
+<app-child *ngFor="let child of children" [name]="child" (message)="computeAvg($event)"></app-child>
