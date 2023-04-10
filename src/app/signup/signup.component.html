@@ -1,0 +1,28 @@
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-4 login-form">
+            <h3>Sign Up</h3>
+    <form>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()" >
+              <div >
+            <label for="exampleInputEmail1">Full Name</label>
+            <input formControlName="fullname"  type="text" class="form-control">
+
+        </div>
+        <div >
+        <label for="exampleInputEmail1">Email address</label>
+        <input formControlName="email" type="text" class="form-control">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div>
+        <label for="exampleInputPassword1">Password</label>
+        <input formControlName="password" type="text" class="form-control">
+        </div>
+             
+        <button type="submit" class="btn btn-primary">Sign UP</button>
+        </form>
+        <a routerLink="/auth">Already registred ?  Click to login</a> 
+    </form>
+    </div>
+    </div>
+</div>

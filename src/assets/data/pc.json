@@ -1,0 +1,6 @@
+[{"ref":"Ref1000","marque": "ACER", "processeur":"Nitro N50-610 - Core™ i7-10700"},
+    {"ref":"Ref2000", "marque": "GUNGNIR", "processeur": "I7-10700KF - 3070"},
+    {"ref": "Ref3000", "marque": "MSI", "processeur": "Intel Core i7-10700KF"},
+    {"ref": "Ref4000", "marque": "MSI", "processeur": "Intel Core i9-10700KF"}
+    ]
+    

@@ -1,0 +1,54 @@
+
+<div class="content-body">
+          <h4 class="card-title mb-4">Joueurs  l'Espérance Sportive de Tunis</h4>
+</div>
+
+<div class='container'>
+
+      <table class="table table-responsive">
+      
+      <thead>
+      
+      <tr>
+      
+      <th>Index</th>
+      
+      <th>Id</th>
+      
+      <th>Nom</th>
+      
+      <th>Prenom</th>
+      <th>Photo</th>
+      </tr>
+      
+      </thead>
+      
+      <tbody>
+      
+      <tr *ngFor="let character of personnes;
+         let i = index;
+      
+      let even = even;
+      
+      let odd = odd"
+      
+      [ngClass]="{odd: odd, even: even }">
+      
+      <td>{{ i }}</td>
+      
+      <td>{{ character.id }}</td>
+      
+      <td>{{ character.nom }}</td>
+      
+      <td>{{ character.prenom }}</td>
+      <td> <img src="{{ character.photo }}" width="50" height="60" /> </td>
+     
+      </tr>
+      
+      </tbody>
+      
+      </table>
+      
+      </div>
+
+      
